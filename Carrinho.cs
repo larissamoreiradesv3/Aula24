@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Aula24
@@ -5,7 +6,7 @@ namespace Aula24
     public class Carrinho
     {
         //Propriedade criada para guardar o valor total dos produtos adicionados no carrinho
-        public float ValorTotal { get; set}
+        public float ValorTotal { get; set; }
         List<Produto> carrinho = new List<Produto>();
         
         //Metodo criado para adicionar os produtos no carrinho, observe que se passa o objeto como argumento
@@ -34,7 +35,6 @@ namespace Aula24
             foreach (Produto item in carrinho){
                 ValorTotal += item.Preco;
         }
-        Console.ForengroundColor = Console.Color.Blue;
         Console.WriteLine($"Valor total dos itens: R${ValorTotal}");
         Console.ResetColor();                 
         }
